@@ -1,15 +1,26 @@
 import { NavLink } from "react-router-dom";
+
 import { HeaderWrapper, HeaderLeft, HeaderRight } from './style';
 import { headerLinks } from "@/common/local-data";
+import { Input, Button } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
 
 function Header() {
-  const showSelectItem = (item, index) =>{
-    if(index < 3){
+  const showSelectItem = (item, index) => {
+    if (index < 3) {
       return (
-        <NavLink to={item.link}>{item.title}</NavLink>
+        <NavLink to={item.link}>
+          {item.title}
+          <i className="icon topbar"></i>
+        </NavLink>
       )
-    } else{
-      return  <a href={item.link}>{item.title}</a>
+    } else {
+      return (
+        <a href={item.link}>
+          {item.title}
+          <i className="icon topbar"></i>
+        </a>
+      )
     }
   }
 
@@ -28,12 +39,11 @@ function Header() {
                 )
               })}
             </div>
-            {/* <NavLink to="/">发现音乐</NavLink>
-            <NavLink to="/mine">我的音乐</NavLink>
-            <NavLink to="/friend">朋友</NavLink> */}
           </HeaderLeft>
           <HeaderRight>
-            搜索
+            <Input className="search" placeholder="音乐/视频/电台/用户" prefix={<SearchOutlined/>} ></Input>
+            <Button shape="round" ghost className="center">创作者中心</Button >
+            <Button ghost className="login">登录</Button>
           </HeaderRight>
         </div>
       </div>
