@@ -1,8 +1,12 @@
+import { DiscoverWrapper, TopMenu } from './style';
+
 function Discover() {
   return ( 
-    <div>
-      <h1>Discover</h1>
-    </div>
+    <DiscoverWrapper>
+      <div className="top">
+        <TopMenu></TopMenu>
+      </div>
+    </DiscoverWrapper>
   );
 }
 

@@ -4,8 +4,12 @@ import Mine from "../views/mine";
 
 const pageRouter = [
   {
-    path: '/',
+    path: "/",
     exact: true,
+    components:<Discover />
+  },
+  {
+    path: '/discover',
     element: <Discover />
   },
   {

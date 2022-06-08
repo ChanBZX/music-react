@@ -29,7 +29,7 @@ function Header() {
       <div className="content">
         <div className="header-func">
           <HeaderLeft>
-            <a href="#/" className="logo topbar"></a>
+            <NavLink to="/" className="logo topbar"></NavLink>
             <div className="select-list">
               {headerLinks.map((item, index) => {
                 return (
@@ -41,7 +41,7 @@ function Header() {
             </div>
           </HeaderLeft>
           <HeaderRight>
-            <Input className="search" placeholder="音乐/视频/电台/用户" prefix={<SearchOutlined/>} ></Input>
+            <Input className="search" placeholder="音乐/视频/电台/用户" prefix={<SearchOutlined />} ></Input>
             <Button shape="round" ghost className="center">创作者中心</Button >
             <Button ghost className="login">登录</Button>
           </HeaderRight>
